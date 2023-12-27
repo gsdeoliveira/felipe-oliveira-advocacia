@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+div.swiper-button-prev,
+div.swiper-button-next {
+   color: #CD8A08;
+}
+
 html, body {
   max-width: 1440px;
   margin: 0 auto;
