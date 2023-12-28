@@ -9,18 +9,28 @@ import Button from '@/components/Button'
 
 const BlogSection = () => {
   return (
-    <section className="p-[50px]">
-      <h2 className="text-[30px] font-bold bg-text text-center">Blog</h2>
-      <p className="text-white text-center mb-[30px]">
+    <section className="lg:p-[50px] mt-[120px] lg:mt-[90px]">
+      <h2 className="text-[30px] font-bold bg-text text-center px-[20px] lg:px-[50px]">
+        Blog
+      </h2>
+      <p className="text-white text-center mb-[30px] px-[20px] lg:px-[50px]">
         Fique Atualizado com Nossos Últimos Artigos e Notícias
       </p>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className="text-start text-white mr-[20px] h-full max-w-[32.3%]">
+        <SwiperSlide className="text-start text-white lg:mr-[20px] px-[20px] lg:px-0 h-full md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="bg-gray pb-[20px] rounded-[5px]">
             <Image
               src={postBlog1}
@@ -42,7 +52,7 @@ const BlogSection = () => {
             </Link>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-start text-white mr-[20px] h-full max-w-[32.3%]">
+        <SwiperSlide className="text-start text-white lg:mr-[20px] px-[20px] lg:px-0 h-full md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="bg-gray pb-[20px] rounded-[5px]">
             <Image
               src={postBlog1}
@@ -64,7 +74,7 @@ const BlogSection = () => {
             </Link>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-start text-white mr-[20px] h-full max-w-[32.3%]">
+        <SwiperSlide className="text-start text-white lg:mr-[20px] px-[20px] lg:px-0 h-full md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="bg-gray pb-[20px] rounded-[5px]">
             <Image
               src={postBlog1}
@@ -86,7 +96,7 @@ const BlogSection = () => {
             </Link>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-start text-white mr-[20px] h-full max-w-[32.3%]">
+        <SwiperSlide className="text-start text-white mr-[20px] lg:mr-[20px] px-[20px] lg:px-0 h-full md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="bg-gray pb-[20px] rounded-[5px]">
             <Image
               src={postBlog1}

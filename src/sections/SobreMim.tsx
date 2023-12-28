@@ -4,8 +4,8 @@ import advogado from '@/assets/advogado.png'
 
 const SobreMim = () => {
   return (
-    <section className="bg-sobremim flex items-center gap-[20px] mb-[120px] mx-[100px] mt-[120px] rounded-[5px]">
-      <div className="w-1/2">
+    <section className="bg-sobremim flex flex-col lg:flex-row items-center gap-[20px] lg:mb-[120px] mx-[20px] lg:mx-[100px] mt-[120px] rounded-[5px]">
+      <div className="w-full lg:w-1/2">
         <Image
           src={advogado}
           width={500}
@@ -14,7 +14,7 @@ const SobreMim = () => {
           className="w-full"
         />
       </div>
-      <div className="w-1/2 p-[20px] flex flex-col gap-[20px] text-darkGray">
+      <div className="lg:w-1/2 p-[20px] flex flex-col gap-[20px] text-darkGray text-center lg:text-start">
         <h2 className="text-[30px] font-bold">Sobre Mim</h2>
         <p className="">
           Olá, sou Felipe Oliveira, um advogado dedicado a proporcionar soluções

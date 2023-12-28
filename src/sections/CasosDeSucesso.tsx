@@ -13,19 +13,28 @@ import 'swiper/css/navigation'
 
 const CasosDeSucesso = () => {
   return (
-    <section className="mt-[120px] p-[50px]">
-      <h2 className="text-[30px] bg-text text-center">Casos de Sucesso</h2>
-      <p className="text-white text-center pb-[20px]">
+    <section className="mt-[120px] lg:mt-[90px] lg:p-[50px]">
+      <h2 className="text-[30px] px-[20px] lg:px-0 bg-text text-center">
+        Casos de Sucesso
+      </h2>
+      <p className="text-white text-center px-[20px] lg:px-0 pb-[20px]">
         Conheça alguns dos casos de sucesso que ilustram nossa dedicação,
         experiência e habilidades excepcionais em diversas áreas do direito.
       </p>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper"
       >
-        <SwiperSlide className="text-center text-white mr-[20px] h-full max-w-[32.3%]">
+        <SwiperSlide className="text-center text-white lg:mr-[20px] px-[20px] lg:px-0 h-full md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="pt-[100px] lg:h-[437px] xl:h-[365px] 2xl:h-[340px] pb-[30px] px-[20px] rounded-[5px] bg-gray mt-[100px] relative">
             <Image
               src={pedro}
@@ -44,7 +53,7 @@ const CasosDeSucesso = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-center text-white mr-[20px] max-w-[32.3%]">
+        <SwiperSlide className="text-center text-white lg:mr-[20px] px-[20px] lg:px-0 md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="pt-[100px] lg:h-[437px] xl:h-[365px] 2xl:h-[340px] pb-[30px] px-[20px] rounded-[5px] bg-gray mt-[100px] relative">
             <Image
               src={joana}
@@ -63,7 +72,7 @@ const CasosDeSucesso = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-center text-white mr-[20px] max-w-[32.3%]">
+        <SwiperSlide className="text-center text-white lg:mr-[20px] px-[20px] lg:px-0 md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="pt-[100px] lg:h-[437px] xl:h-[365px] 2xl:h-[340px] pb-[30px] px-[20px] rounded-[5px] bg-gray mt-[100px] relative">
             <Image
               src={guilherme}
@@ -81,7 +90,7 @@ const CasosDeSucesso = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="text-center text-white mr-[20px] max-w-[32.3%]">
+        <SwiperSlide className="text-center text-white lg:mr-[20px] px-[20px] lg:px-0 md:max-w-[50%] lg:max-w-[32.3%]">
           <div className="pt-[100px] lg:h-[437px] xl:h-[365px] 2xl:h-[340px] pb-[30px] px-[20px] rounded-[5px] bg-gray mt-[100px] relative">
             <Image
               src={pedro}

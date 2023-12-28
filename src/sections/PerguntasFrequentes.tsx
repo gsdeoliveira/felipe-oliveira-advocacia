@@ -4,7 +4,7 @@ import React from 'react'
 
 const PerguntasFrequentes = () => {
   return (
-    <section className="mt-[90px] px-[50px] text-white">
+    <section className="mt-[120px] lg:mt-[90px] px-[20px] lg:px-[50px] text-white">
       <h2 className="bg-text text-[30px] text-center font-bold">
         Perguntas Frequentes
       </h2>
@@ -33,7 +33,7 @@ const PerguntasFrequentes = () => {
       <p className="text-center text-[20px] mt-[20px]">
         Ainda tem alguma dúvida?
       </p>
-      <Button className="mx-auto mt-[20px]">Falar com um especialista</Button>
+      <Button className="mx-auto mt-[20px]">Falar Com Um Especialista</Button>
     </section>
   )
 }
