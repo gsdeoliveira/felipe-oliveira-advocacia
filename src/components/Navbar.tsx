@@ -16,7 +16,7 @@ const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <nav className="px-[20px] lg:px-[50px] py-[20px] lg:py-[30px] w-full flex items-center justify-between text-white">
+    <nav className="fixed h-[100px] max-w-[1440px] bg-black/70 z-50 px-[20px] lg:px-[50px] py-[20px] lg:py-[30px] w-full flex items-center justify-between text-white">
       <Image
         src={logo}
         width={187}
@@ -52,9 +52,9 @@ const Navbar = () => {
       <div
         className={`${
           menuIsOpen ? 'fixed' : 'hidden'
-        } z-30 w-full h-screen top-0 left-0 bg-darkGray p-[20px]`}
+        } z-30 w-full h-screen top-0 left-0 bg-darkGray p-[20px] pt-0`}
       >
-        <div className="flex justify-between">
+        <div className="flex h-[100px] items-center justify-between">
           <Image src={logo} width={187} height={45} alt="logo" />
           <Image
             src={close}
@@ -69,16 +69,16 @@ const Navbar = () => {
           <div>
             <ul className="flex flex-col text-[30px] justify-center items-center gap-[20px]">
               <li className="hover:text-gold transition-all">
-                <a href="#">Página Inicial</a>
+                <Link href="/">Página Inicial</Link>
               </li>
               <li className="hover:text-gold transition-all">
-                <a href="#">Nossos Serviços</a>
+                <Link href="/servicos">Nossos Serviços</Link>
               </li>
               <li className="hover:text-gold transition-all">
-                <a href="#">Blog</a>
+                <Link href="/blog">Blog</Link>
               </li>
               <li className="hover:text-gold transition-all">
-                <a href="#">Contato</a>
+                <Link href="/contato">Contato</Link>
               </li>
             </ul>
           </div>

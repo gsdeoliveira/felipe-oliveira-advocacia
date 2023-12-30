@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="relative hero-bg flex flex-col text-white">
       <Navbar />
-      <div className="flex flex-col lg:flex-row items-center p-[20px] md:pb-0 md:p-[50px] lg:pr-0">
+      <div className="mt-[100px] flex flex-col lg:flex-row items-center p-[20px] md:pb-0 md:p-[50px] lg:pr-0">
         <div className="lg:w-1/2 flex flex-col gap-[30px] text-center lg:text-start">
           <h1 className="bg-text text-[32px] sm:text-[40px] md:text-[50px] xl:text-[60px] font-bold leading-tight">
             Defenda Seus Direitos Com Experiência e Comprometimento
