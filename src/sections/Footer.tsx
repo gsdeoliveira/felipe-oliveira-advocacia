@@ -12,7 +12,7 @@ import arrow from '@/assets/arrow.svg'
 
 const Footer = () => {
   return (
-    <footer className="p-[20px] lg:p-[50px] text-white">
+    <footer className="p-[20px] lg:p-[50px] mt-[90px] text-white">
       <div className="flex flex-col lg:flex-row justify-center gap-[50px]">
         <div className="flex flex-col gap-[20px]">
           <Image src={logo} alt="logo" />

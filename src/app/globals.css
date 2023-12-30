@@ -42,3 +42,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.bg-cta {
+  background-image: url('../assets/bg-cta.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-balanca {
+  background-image: url('../assets/bg-balanca.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .bg-balanca {
+    background-image: url('../assets/bg-balanca-mobile.webp');
+  }
+}
+

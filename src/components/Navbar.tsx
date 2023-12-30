@@ -45,7 +45,7 @@ const Navbar = () => {
         width={30}
         height={30}
         alt="Abrir menu"
-        className="lg:hidden"
+        className="md:hidden"
         onClick={() => setMenuIsOpen(true)}
       />
       <div

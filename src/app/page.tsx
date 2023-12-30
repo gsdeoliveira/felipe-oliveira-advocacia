@@ -1,5 +1,6 @@
 import BlogSection from '@/sections/BlogSection'
 import CasosDeSucesso from '@/sections/CasosDeSucesso'
+import Cta from '@/sections/Cta'
 import EntreEmContato from '@/sections/EntreEmContato'
 import Footer from '@/sections/Footer'
 import Hero from '@/sections/Hero'
@@ -17,8 +18,8 @@ export default function Home() {
       <BlogSection />
       <PerguntasFrequentes />
       <EntreEmContato />
+      <Cta />
       <Footer />
     </>
   )
 }
-/* Teste */
