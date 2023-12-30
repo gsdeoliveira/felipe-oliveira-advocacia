@@ -10,6 +10,7 @@ import instagram from '@/assets/instagram.svg'
 import facebook from '@/assets/facebook.svg'
 import twitter from '@/assets/twitter.svg'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -26,16 +27,16 @@ const Navbar = () => {
       <div className="hidden md:flex">
         <ul className="flex items-center gap-[20px]">
           <li className="hover:text-gold transition-all">
-            <a href="#">Página Inicial</a>
+            <Link href="/">Página Inicial</Link>
           </li>
           <li className="hover:text-gold transition-all">
-            <a href="#">Nossos Serviços</a>
+            <Link href="/servicos">Nossos Serviços</Link>
           </li>
           <li className="hover:text-gold transition-all">
-            <a href="#">Blog</a>
+            <Link href="/blog">Blog</Link>
           </li>
           <li className="hover:text-gold transition-all">
-            <a href="#">Contato</a>
+            <Link href="/contato">Contato</Link>
           </li>
         </ul>
       </div>
