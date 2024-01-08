@@ -27,7 +27,7 @@ async function getData() {
   return res.json()
 }
 
-const Page = async ({
+const page = async ({
   searchParams,
 }: {
   [key: string]: string | undefined
@@ -118,4 +118,4 @@ const Page = async ({
   )
 }
 
-export default Page
+export default page
