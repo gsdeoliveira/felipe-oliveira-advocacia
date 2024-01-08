@@ -37,7 +37,7 @@ const page = async ({
     { length: posts.meta.pagination.pageCount },
     (_, index) => index + 1,
   )
-  console.log(searchParams?.page)
+  console.log(searchParams)
 
   return (
     <>
