@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import advogado from '@/assets/advogado.png'
+import advogado from '@/assets/advogado.webp'
 
 const SobreMim = () => {
   return (

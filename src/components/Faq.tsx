@@ -22,9 +22,9 @@ const Faq = ({ question, answer }: { question: string; answer: string }) => {
         <Image
           src={arrow}
           alt="arrow"
-          className={`${
-            isOpen ? 'rotate-[90deg]' : ''
-          } scale-75 transition-all`}
+          width={20}
+          height={20}
+          className={`${isOpen ? 'rotate-[90deg]' : ''}  transition-all`}
         />
       </div>
       {isOpen && (

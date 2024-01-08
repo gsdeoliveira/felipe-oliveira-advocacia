@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import HeroImg from '@/assets/advogado-hero.png'
+import HeroImg from '@/assets/advogado-hero.webp'
 import Button from '@/components/Button'
 import Navbar from '@/components/Navbar'
 

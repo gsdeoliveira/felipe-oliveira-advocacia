@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.webp'
 import menu from '@/assets/menu.svg'
 import close from '@/assets/close.svg'
 import whatsapp from '@/assets/whatsapp.svg'
@@ -16,14 +16,8 @@ const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <nav className="fixed h-[100px] max-w-[1440px] bg-black/70 z-50 px-[20px] lg:px-[50px] py-[20px] lg:py-[30px] w-full flex items-center justify-between text-white">
-      <Image
-        src={logo}
-        width={187}
-        height={45}
-        alt="logo"
-        className="lg:w-[267px] lg:h-[64px]"
-      />
+    <nav className="fixed h-[70px] max-w-[1440px] bg-black/70 z-50 px-[20px] lg:px-[50px] py-[20px] lg:py-[30px] w-full flex items-center justify-between text-white">
+      <Image src={logo} width={187} height={45} alt="logo" className="" />
       <div className="hidden md:flex">
         <ul className="flex items-center gap-[20px]">
           <li className="hover:text-gold transition-all">

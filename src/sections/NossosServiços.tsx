@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import Button from '@/components/Button'
-import balanca from '@/assets/balanca.png'
+import balanca from '@/assets/balanca.webp'
 import CardServicos from '@/components/CardServicos'
 
 const NossosServiços = () => {

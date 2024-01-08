@@ -3,9 +3,9 @@ import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 
-import pedro from '@/assets/pedro.png'
+import pedro from '@/assets/pedro.webp'
 import joana from '@/assets/joana.png'
-import guilherme from '@/assets/guilherme.png'
+import guilherme from '@/assets/guilherme.webp'
 
 // Import Swiper styles
 import 'swiper/css'

@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import localizacao from '@/assets/localizacao.png'
-import telefone from '@/assets/telefone.png'
-import email from '@/assets/email.png'
+import localizacao from '@/assets/localizacao.webp'
+import telefone from '@/assets/telefone.webp'
+import email from '@/assets/email.webp'
 import whatsapp from '@/assets/whatsapp.svg'
 import instagram from '@/assets/instagram.svg'
 import facebook from '@/assets/facebook.svg'
 import twitter from '@/assets/twitter.svg'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.webp'
 import arrow from '@/assets/arrow.svg'
 
 const Footer = () => {

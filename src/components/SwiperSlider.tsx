@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-import postBlog1 from '@/assets/post-blog-1.png'
+import postBlog1 from '@/assets/post-blog-1.webp'
 
 const SwiperSlider = () => {
   return (
