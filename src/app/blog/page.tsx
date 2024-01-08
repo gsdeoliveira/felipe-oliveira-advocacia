@@ -27,18 +27,12 @@ async function getData() {
   return res.json()
 }
 
-const page = async ({
-  searchParams,
-}: {
-  [key: string]: string | undefined
-}) => {
+const page = async () => {
   const posts = await getData()
   const pagesCount = Array.from(
     { length: posts.meta.pagination.pageCount },
     (_, index) => index + 1,
   )
-  console.log(searchParams)
-
   return (
     <>
       <div className="bg-balanca">
