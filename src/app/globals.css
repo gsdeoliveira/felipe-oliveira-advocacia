@@ -12,6 +12,10 @@ html, body {
   margin: 0 auto;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 body {
   background-color: #1C1C1C;
 }

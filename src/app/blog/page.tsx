@@ -6,33 +6,30 @@ import Button from '@/components/Button'
 import arrow from '@/assets/arrow.svg'
 import Footer from '@/sections/Footer'
 import { BlogPost } from '@/utils/getPosts'
+import { formatarData } from '@/utils/formatarData'
 
-function formatarData(dataString: string) {
-  const data = new Date(dataString)
-  const dia = String(data.getDate()).padStart(2, '0')
-  const mes = String(data.getMonth() + 1).padStart(2, '0') // Os meses são indexados de 0 a 11
-  const ano = data.getFullYear()
-
-  return `${dia}/${mes}/${ano}`
-}
-
-async function getData() {
+async function getData({ page }: { page: string }) {
   const res = await fetch(
-    'https://felipe-oliveira-blog.onrender.com/api/blog-posts?populate=*&pagination[page]=2&pagination[pageSize]=5',
+    `https://felipe-oliveira-blog.onrender.com/api/blog-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=5`,
   )
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
   return res.json()
 }
 
-const page = async () => {
-  const posts = await getData()
+const page = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined }
+}) => {
+  const atualPage = searchParams.page ? searchParams.page : '1'
+  const posts = await getData({ page: atualPage })
   const pagesCount = Array.from(
     { length: posts.meta.pagination.pageCount },
     (_, index) => index + 1,
   )
+
   return (
     <>
       <div className="bg-balanca">
@@ -55,7 +52,7 @@ const page = async () => {
         {posts.data.map((post: BlogPost) => (
           <Link
             key={post.id}
-            href={`/blog/post/${post.id}`}
+            href={`/blog/${post.id}`}
             className="bg-gray pb-[20px] rounded-[5px] flex flex-col justify-between"
           >
             <div>
@@ -91,21 +88,36 @@ const page = async () => {
         ))}
       </div>
       <div className="flex gap-[5px] my-[20px] justify-center items-center">
-        <div className="px-2 py-2 rounded-[5px] border border-gray">
+        <Link
+          href={`/blog?page=${
+            Number(atualPage) - 1 < 1 ? '1' : Number(atualPage) - 1
+          }`}
+          className="px-2 py-2 rounded-[5px] border border-gray"
+        >
           <Image src={arrow} width={20} alt="Anterior" className="rotate-180" />
-        </div>
+        </Link>
 
         {pagesCount.map((numero) => (
-          <div
-            className="px-3 py-2 text-white rounded-[5px] border border-gray bg-gold"
+          <Link
+            href={`/blog?page=${numero}`}
+            className={`px-3 py-2 text-white rounded-[5px] border border-gray ${
+              numero.toString() === atualPage ? 'bg-gold' : ''
+            }`}
             key={numero}
           >
             {numero}
-          </div>
+          </Link>
         ))}
-        <div className="px-2 py-2 rounded-[5px] border border-gray">
+        <Link
+          href={`/blog?page=${
+            Number(atualPage) + 1 > pagesCount[pagesCount.length - 1]
+              ? pagesCount[pagesCount.length - 1]
+              : Number(atualPage) + 1
+          }`}
+          className="px-2 py-2 rounded-[5px] border border-gray"
+        >
           <Image src={arrow} width={20} alt="Anterior" />
-        </div>
+        </Link>
       </div>
       <Footer />
     </>

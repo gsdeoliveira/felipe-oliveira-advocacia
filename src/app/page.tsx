@@ -8,7 +8,7 @@ import NossosServiços from '@/sections/NossosServiços'
 import PerguntasFrequentes from '@/sections/PerguntasFrequentes'
 import SobreMim from '@/sections/SobreMim'
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Hero />
