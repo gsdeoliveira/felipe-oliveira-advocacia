@@ -1,4 +1,6 @@
 import Navbar from '@/components/Navbar'
+import EntreEmContato from '@/sections/EntreEmContato'
+import Footer from '@/sections/Footer'
 import Image from 'next/image'
 import ReactMarkdown from 'react-markdown'
 
@@ -17,7 +19,7 @@ const page = async ({ params }: { params: { id: string } }) => {
   return (
     <>
       <Navbar />
-      <div className="w-full p-[100px] flex flex-col items-start text-white">
+      <div className="w-full px-[20px] sm:px-[50px] lg:px-[100px] flex flex-col items-start text-white">
         <Image
           width={980}
           height={500}
@@ -25,7 +27,7 @@ const page = async ({ params }: { params: { id: string } }) => {
           className="w-full h-[700px] object-cover self-center rounded-[5px]"
           alt="Imagem Post"
         />
-        <h1 className="text-[48px] my-[10px] bg-text">
+        <h1 className="text-[48px] my-[30px] bg-text">
           {post.data.attributes.titulo}
         </h1>
         <p className="text-[20px] mb-[50px]">
@@ -35,6 +37,8 @@ const page = async ({ params }: { params: { id: string } }) => {
           <ReactMarkdown>{post.data.attributes.blogConteudo}</ReactMarkdown>
         </div>
       </div>
+      <EntreEmContato />
+      <Footer />
     </>
   )
 }

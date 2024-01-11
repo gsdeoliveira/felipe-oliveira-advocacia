@@ -1,6 +1,8 @@
 'use client'
-
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import { useState } from 'react'
 
 import logo from '@/assets/logo.webp'
 import menu from '@/assets/menu.svg'
@@ -9,29 +11,38 @@ import whatsapp from '@/assets/whatsapp.svg'
 import instagram from '@/assets/instagram.svg'
 import facebook from '@/assets/facebook.svg'
 import twitter from '@/assets/twitter.svg'
-import { useState } from 'react'
-import Link from 'next/link'
 
 const Navbar = () => {
+  const pathname = usePathname()
   const [menuIsOpen, setMenuIsOpen] = useState(false)
+  console.log(pathname)
+
+  const menuItems = [
+    { href: '/', label: 'Página Inicial' },
+    { href: '/servicos', label: 'Nossos Serviços' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contato', label: 'Contato' },
+  ]
+
+  const handleMenuToggle = () => setMenuIsOpen(!menuIsOpen)
 
   return (
     <nav className="fixed h-[70px] max-w-[1440px] bg-black/70 z-50 px-[20px] lg:px-[50px] py-[20px] lg:py-[30px] w-full flex items-center justify-between text-white">
-      <Image src={logo} width={187} height={45} alt="logo" className="" />
+      <Link href={'/'}>
+        <Image src={logo} width={187} height={45} alt="logo" />
+      </Link>
       <div className="hidden md:flex">
         <ul className="flex items-center gap-[20px]">
-          <li className="hover:text-gold transition-all">
-            <Link href="/">Página Inicial</Link>
-          </li>
-          <li className="hover:text-gold transition-all">
-            <Link href="/servicos">Nossos Serviços</Link>
-          </li>
-          <li className="hover:text-gold transition-all">
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li className="hover:text-gold transition-all">
-            <Link href="/contato">Contato</Link>
-          </li>
+          {menuItems.map(({ href, label }) => (
+            <li
+              key={href}
+              className={`hover:text-gold transition-all ${
+                pathname === href ? 'text-gold' : ''
+              }`}
+            >
+              <Link href={href}>{label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -40,8 +51,8 @@ const Navbar = () => {
         width={30}
         height={30}
         alt="Abrir menu"
-        className="md:hidden"
-        onClick={() => setMenuIsOpen(true)}
+        className="md:hidden cursor-pointer"
+        onClick={handleMenuToggle}
       />
       <div
         className={`${
@@ -55,25 +66,23 @@ const Navbar = () => {
             width={30}
             height={30}
             alt="Fechar menu"
-            className="lg:hidden"
-            onClick={() => setMenuIsOpen(false)}
+            className="lg:hidden cursor-pointer"
+            onClick={handleMenuToggle}
           />
         </div>
         <div className="flex flex-col justify-between h-full py-[100px]">
           <div>
             <ul className="flex flex-col text-[30px] justify-center items-center gap-[20px]">
-              <li className="hover:text-gold transition-all">
-                <Link href="/">Página Inicial</Link>
-              </li>
-              <li className="hover:text-gold transition-all">
-                <Link href="/servicos">Nossos Serviços</Link>
-              </li>
-              <li className="hover:text-gold transition-all">
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li className="hover:text-gold transition-all">
-                <Link href="/contato">Contato</Link>
-              </li>
+              {menuItems.map(({ href, label }) => (
+                <li
+                  key={href}
+                  className={`hover:text-gold transition-all ${
+                    pathname === href ? 'text-gold' : ''
+                  }`}
+                >
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="flex justify-center items-center gap-[30px]">

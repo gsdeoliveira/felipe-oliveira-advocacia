@@ -3,6 +3,7 @@ import Image from 'next/image'
 import HeroImg from '@/assets/advogado-hero.webp'
 import Button from '@/components/Button'
 import Navbar from '@/components/Navbar'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -20,7 +21,9 @@ const Hero = () => {
             legal com dedicação e eficiência.
           </p>
           <Button className="self-center lg:self-start">
-            <a href="#">Entrar em Contato</a>
+            <Link href="https://wa.me/5585986638595" target="_blank">
+              Entrar em Contato
+            </Link>
           </Button>
         </div>
         <div className="lg:w-1/2 self-center mt-[50px] lg:mt-0 lg:self-end">

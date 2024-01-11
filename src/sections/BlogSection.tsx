@@ -25,7 +25,7 @@ const BlogSection = async () => {
       </p>
       <SwiperSlider posts={posts.data} />
       <Link
-        href={''}
+        href={'/blog'}
         className="flex justify-center items-center mt-[50px] text-white"
       >
         <Button>Ir para o blog</Button>

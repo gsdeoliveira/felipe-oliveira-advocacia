@@ -14,7 +14,7 @@ const SobreMim = () => {
           className="w-full"
         />
       </div>
-      <div className="lg:w-1/2 p-[20px] flex flex-col gap-[20px] text-darkGray text-center lg:text-start">
+      <div className="lg:w-1/2 p-[20px] flex flex-col gap-[20px] text-darkGray lg:text-start">
         <h2 className="text-[30px] font-bold">Sobre Mim</h2>
         <p className="">
           Olá, sou Felipe Oliveira, um advogado dedicado a proporcionar soluções

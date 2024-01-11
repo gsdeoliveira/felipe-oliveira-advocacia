@@ -14,9 +14,9 @@ import Footer from '@/sections/Footer'
 const page = () => {
   return (
     <>
-      <div className="bg-balanca h-[444px]">
+      <div className="bg-balanca h-[300px]">
         <Navbar />
-        <div className="p-[20px] lg:p-[50px] lg:w-1/2 text-center lg:text-start">
+        <div className="p-[20px] pt-[70px] lg:pt-[70px] lg:p-[50px] lg:w-1/2 text-center lg:text-start">
           <h1 className="bg-text text-[32px] sm:text-[40px] md:text-[50px] xl:text-[60px]">
             Contato
           </h1>
@@ -27,7 +27,7 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row mt-[90px] justify-center">
+      <div className="flex flex-col md:flex-row mt-[90px] p-[20px] lg:p-[50px] justify-center">
         <div className="lg:w-1/2 text-center md:text-start text-white bg-gray p-[30px] rounded-s-[5px]">
           <h2 className="text-[30px] font-bold bg-text">Entre em Contato</h2>
           <p>
@@ -79,6 +79,7 @@ const page = () => {
           <form action="" className="flex flex-col gap-[10px]">
             <label htmlFor="nome">Nome:</label>
             <input
+              required
               type="text"
               id="nome"
               placeholder="Seu nome"
@@ -86,6 +87,7 @@ const page = () => {
             />
             <label htmlFor="email">Email:</label>
             <input
+              required
               type="text"
               id="email"
               placeholder="Seu email"
@@ -93,6 +95,7 @@ const page = () => {
             />
             <label htmlFor="assunto">Assunto:</label>
             <input
+              required
               type="text"
               id="assunto"
               placeholder="Assunto"
@@ -100,6 +103,7 @@ const page = () => {
             />
             <label htmlFor="mensagem">Mensagem:</label>
             <textarea
+              required
               name="mensagem"
               id="mensagem"
               cols={30}

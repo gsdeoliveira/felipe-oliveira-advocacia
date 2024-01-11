@@ -63,6 +63,8 @@ body {
 @media (max-width: 1024px) {
   .bg-balanca {
     background-image: url('../assets/bg-balanca-mobile.webp');
+    background-size: cover;
+    background-position: top;
   }
 }
 

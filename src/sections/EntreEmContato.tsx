@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const EntreEmContato = () => {
   return (
-    <section className="mt-[120px] lg:mt-[90px] p-[20px] lg:p-[50px] text-white">
+    <section className="mt-[120px] flex justify-center lg:mt-[90px] p-[20px] lg:p-[50px] text-white">
       <div className="flex flex-col lg:flex-row gap-[30px] bg-gray rounded-[5px] w-fit p-[20px]">
         <div className="lg:w-[40%] text-center lg:text-start">
           <h2 className="text-[30px] font-bold bg-text">Entre em Contato</h2>

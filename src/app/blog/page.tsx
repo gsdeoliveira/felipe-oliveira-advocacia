@@ -32,9 +32,9 @@ const page = async ({
 
   return (
     <>
-      <div className="bg-balanca">
+      <div className="bg-balanca h-[300px]">
         <Navbar />
-        <div className="p-[20px] lg:p-[50px] lg:w-1/2 text-center lg:text-start">
+        <div className="p-[20px] pt-[70px] lg:pt-[70px] lg:p-[50px] lg:w-1/2 text-center lg:text-start">
           <h1 className="bg-text text-[32px] sm:text-[40px] md:text-[50px] xl:text-[60px]">
             Blog
           </h1>

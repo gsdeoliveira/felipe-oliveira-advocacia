@@ -9,6 +9,7 @@ import facebook from '@/assets/facebook.svg'
 import twitter from '@/assets/twitter.svg'
 import logo from '@/assets/logo.webp'
 import arrow from '@/assets/arrow.svg'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -29,22 +30,22 @@ const Footer = () => {
         <div>
           <h3 className="text-[30px]">Links Úteis</h3>
           <div className="flex flex-col gap-[10px] mt-[20px]">
-            <div className="flex items-center gap-[10px]">
+            <Link href={'/'} className="flex items-center gap-[10px]">
               <Image width={20} height={20} src={arrow} alt="arrow" />
               <p>Página Inicial</p>
-            </div>
-            <div className="flex items-center gap-[10px]">
+            </Link>
+            <Link href={'/servicos'} className="flex items-center gap-[10px]">
               <Image width={20} height={20} src={arrow} alt="arrow" />
               <p>Nossos Serviços</p>
-            </div>
-            <div className="flex items-center gap-[10px]">
+            </Link>
+            <Link href={'/blog'} className="flex items-center gap-[10px]">
               <Image width={20} height={20} src={arrow} alt="arrow" />
               <p>Blog</p>
-            </div>
-            <div className="flex items-center gap-[10px]">
+            </Link>
+            <Link href={'/contato'} className="flex items-center gap-[10px]">
               <Image width={20} height={20} src={arrow} alt="arrow" />
               <p>Contato</p>
-            </div>
+            </Link>
           </div>
         </div>
         <div>

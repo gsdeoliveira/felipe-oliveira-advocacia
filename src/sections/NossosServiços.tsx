@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Button from '@/components/Button'
 import balanca from '@/assets/balanca.webp'
 import CardServicos from '@/components/CardServicos'
+import Link from 'next/link'
 
 const NossosServiços = () => {
   return (
@@ -18,7 +19,9 @@ const NossosServiços = () => {
           refletindo nosso comprometimento em proporcionar soluções jurídicas
           eficazes e personalizadas.
         </p>
-        <Button className="self-center lg:self-start">Quero Saber Mais</Button>
+        <Link href={'/servicos'} className="self-center lg:self-start">
+          <Button>Quero Saber Mais</Button>
+        </Link>
         <Image
           src={balanca}
           width={434}
@@ -33,16 +36,16 @@ const NossosServiços = () => {
           description="No campo complexo do Direito Empresarial, orientamos nossos clientes em questões contratuais, transações comerciais e litígios corporativos."
         />
         <CardServicos
-          title="Direito Empresarial"
-          description="No campo complexo do Direito Empresarial, orientamos nossos clientes em questões contratuais, transações comerciais e litígios corporativos."
+          title="Direito Civil"
+          description="Em meio às nuances do Direito Civil, fornecemos suporte especializado em contratos, responsabilidade civil e disputas legais."
         />
         <CardServicos
-          title="Direito Empresarial"
-          description="No campo complexo do Direito Empresarial, orientamos nossos clientes em questões contratuais, transações comerciais e litígios corporativos."
+          title="Direito de Família"
+          description="No delicado campo do Direito de Família, oferecemos assistência dedicada em casos de divórcio, guarda, pensão alimentícia e outros assuntos familiares."
         />
         <CardServicos
-          title="Direito Empresarial"
-          description="No campo complexo do Direito Empresarial, orientamos nossos clientes em questões contratuais, transações comerciais e litígios corporativos."
+          title="Direito de Trabalho"
+          description="Seja na negociação de contratos, na resolução de disputas ou na defesa de direitos trabalhistas, estamos comprometidos em oferecer suporte abrangente."
         />
       </div>
     </section>
