@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-[20px] my-[10px]">
               <Image src={telefone} width={20} height={20} alt="telefone" />
-              <p>+55 (85) 99999-9999</p>
+              <p>+55 (85) 98663-8595</p>
             </div>
             <div className="flex gap-[20px]">
               <Image src={email} width={20} height={20} alt="email" />

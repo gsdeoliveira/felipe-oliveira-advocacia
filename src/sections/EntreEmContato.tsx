@@ -25,7 +25,7 @@ const EntreEmContato = () => {
           </div>
           <div className="flex gap-[20px] my-[10px] text-start">
             <Image src={telefone} width={30} height={30} alt="telefone" />
-            <p>(85) 99999-9999</p>
+            <p>(85) 98663-8595</p>
           </div>
           <div className="flex gap-[20px] text-start">
             <Image src={email} width={30} height={30} alt="email" />

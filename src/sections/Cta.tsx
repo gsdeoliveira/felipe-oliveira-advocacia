@@ -1,4 +1,5 @@
 import Button from '@/components/Button'
+import Link from 'next/link'
 
 const Cta = () => {
   return (
@@ -9,9 +10,11 @@ const Cta = () => {
         <span className="text-darkGray font-bold">Comprometimento</span>
       </h2>
       <div className="absolute top-0 w-full h-full bg-black/30"></div>
-      <Button className="text-white self-center md:self-start bg-darkGray md:ml-[300px] relative z-10">
-        Falar Com Advogado
-      </Button>
+      <Link href="https://api.whatsapp.com/send/?phone=5585986638595">
+        <Button className="text-white self-center md:self-start bg-darkGray md:ml-[300px] relative z-10">
+          Falar Com Advogado
+        </Button>
+      </Link>
     </section>
   )
 }
